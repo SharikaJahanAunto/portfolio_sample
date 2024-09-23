@@ -1,518 +1,537 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Append Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-<html class="no-js">
-    <head>
-      {% load static%}
-        <!-- Basic Page Needs
-        ================================================== -->
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="icon" href="favicon.ico">
-        <title>Timer Agency Template</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <!-- Mobile Specific Metas
-        ================================================== -->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-        <!-- theme meta -->
-        <meta name="theme-name" content="timer" />
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png'%}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
 
-        
-        <!-- Template CSS Files
-        ================================================== -->
-        <!-- Twitter Bootstrs CSS -->
-        <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}">
-        <!-- Ionicons Fonts Css -->
-        <link rel="stylesheet" href="{% static 'plugins/ionicons/ionicons.min.css'%}">
-        <!-- animate css -->
-        <link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css'%}">
-        <!-- Hero area slider css-->
-        <link rel="stylesheet" href="{% static 'plugins/slider/slider.css'%}">
-        <!-- slick slider -->
-        <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}">
-        <!-- Fancybox -->
-        <link rel="stylesheet" href="{% static 'plugins/facncybox/jquery.fancybox.css'%}">
-        <!-- hover -->
-        <link rel="stylesheet" href="{% static 'plugins/hover/hover-min.css'%}">
-        <!-- template main css file -->
-        <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    </head>
-    <body>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<!--
-        ==================================================
-        Header Section Start
-        ================================================== -->
-<section class="top-bar animated-header">
-    <div class="container">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="{% static 'assets/img/logo.png'%}" alt=""> -->
+        <h1 class="sitename">Portfolio</h1><span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/hero-bg.jpg'%}" alt="" data-aos="fade-in">
+
+      <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="../images/logo.png" alt="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="service.html">Service</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="404.html">404 Page</a>
-                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
-                                    <a class="dropdown-item" href="single-post.html">Single Post</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Blog
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="blog-fullwidth.html">Blog Full</a>
-                                    <a class="dropdown-item" href="blog-left-sidebar.html">Blog Left sidebar</a>
-                                    <a class="dropdown-item" href="blog-right-sidebar.html">Blog Right sidebar</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--
-==================================================
-Slider Section Start
-================================================== -->
-<section id="hero-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <div class="block wow fadeInUp" data-wow-delay=".3s">
-
-          <!-- Slider -->
-          <section class="cd-intro">
-            <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s">
-              <span>HI, MY NAME IS JONATHON &amp; I AM A</span><br>
-              <span class="cd-words-wrapper">
-                <b class="is-visible">DESIGNER</b>
-                <b>DEVELOPER</b>
-                <b>FATHER</b>
-              </span>
-            </h1>
-          </section> <!-- cd-intro -->
-          <!-- /.slider -->
-          <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
-            With 10 years experience, I've occupied many roles including digital design director,<br> web designer and
-            developer. This site showcases some of my work.
-          </h2>
-          <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right"
-            data-wow-delay=".9s" href="https://themefisher.com/" target="_blank">Download More</a>
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to my Website</h2>
+            <p data-aos="fade-up" data-aos-delay="200">I'm Sharika Jahan Aunto, Web Developer</p>
+          </div>
+          
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!--/#main-slider-->
 
-<!--
-==================================================
-About Section Start
-================================================== -->
-<section id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
-          <h2>
-            ABOUT ME
-          </h2>
-          <p>
-            Hello, I’m a UI/UX Designer &amp; Front End Developer from Victoria, Australia. I hold a master degree of
-            Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only
-            five centuries
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus
-            impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero.
-          </p>
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-1.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-2.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-3.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-4.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-5.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-6.png'%}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
         </div>
 
       </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
-          <img src="images/about/about.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</section> <!-- /#about -->
 
+    </section><!-- /Clients Section -->
 
-<!--
-==================================================
-Portfolio Section Start
-================================================== -->
-<section id="works" class="works">
-  <div class="container">
-    <div class="section-heading">
-      <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Works</h1>
-      <p class="wow fadeInDown" data-wow-delay=".5s">
-        Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est.
-        Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis
-        lacus.
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-1.jpg" class="img-fluid" alt="this is a title">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-1.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Dew Drop
-              </a>
-            </h4>
-            <p>
-              Redesigne UI Concept
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-2.jpg" class="img-fluid" alt="this is a title">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Bottle Mockup
-              </a>
-            </h4>
-            <p>
-              Lorem ipsum dolor sit.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-3.jpg" class="img-fluid" alt="">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Table Design
-              </a>
-            </h4>
-            <p>
-              Lorem ipsum dolor sit amet.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-4.jpg" class="img-fluid" alt="">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-4.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Make Up elements
-              </a>
-            </h4>
-            <p>
-              Lorem ipsum dolor.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="900ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-5.jpg" class="img-fluid" alt="">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-5.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Shoping Bag Concept
-              </a>
-            </h4>
-            <p>
-              Lorem ipsum dolor.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-          <div class="img-wrapper">
-            <img src="images/portfolio/item-6.jpg" class="img-fluid" alt="">
-            <div class="overlay">
-              <div class="buttons">
-                <a rel="gallery" class="fancybox" href="images/portfolio/item-6.jpg">Demo</a>
-                <a target="_blank" href="single-portfolio.html">Details</a>
-              </div>
-            </div>
-          </div>
-          <figcaption>
-            <h4>
-              <a href="#">
-                Caramel Bottle
-              </a>
-            </h4>
-            <p>
-              Lorem ipsum dolor.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section> <!-- #works -->
-<!--
-==================================================
-Portfolio Section Start
-================================================== -->
-<section id="feature">
-  <div class="container">
-    <div class="section-heading">
-      <h1 class="title wow fadeInDown" data-wow-delay=".3s">Offer From Me</h1>
-      <p class="wow fadeInDown" data-wow-delay=".5s">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,<br> quasi dolores numquam dolor vero ex, tempora
-        commodi repellendus quod laborum.
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-flask-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Media heading</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-lightbulb-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Well documented.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="900ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-lightbulb-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Well documented.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1200ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-americanfootball-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Free updates</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1500ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-keypad-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Solid Support</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1800ms">
-          <div class="media-left">
-            <div class="icon">
-              <i class="ion-ios-barcode-outline"></i>
-            </div>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Simple Installation</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> <!-- /#feature -->
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
 
+      <div class="container">
 
-            <!--
-            ==================================================
-            Call To Action Section Start
-            ================================================== -->
-            <section id="call-to-action">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="block">
-                                <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
-                                <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
-                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
-                            </div>
-                        </div>
-                        
-                    </div>
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna duis?</span></h3>
+                <div class="faq-content">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
                 </div>
-            </section>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
 
-            <!--
-            ==================================================
-            Footer Section Start
-            ================================================== -->
-            <footer id="footer">
-                <div class="container">
-                    <div class="row content-justify-between">
-                        <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
-                            <p class="copyright">Copyright: Design and Developed by <a href="http://www.Themefisher.com" target="_blank">Themefisher</a>. <br> 
-                                Get More Bootstrap Template From Our 
-                                <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Store</a>
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <!-- Social Media -->
-                            <ul class="social text-center text-md-right text-lg-right">
-                                <li>
-                                    <a href="http://wwww.fb.com/themefisher" class="Facebook">
-                                        <i class="ion-social-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://wwww.twitter.com/themefisher" class="Twitter">
-                                        <i class="ion-social-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="Linkedin">
-                                        <i class="ion-social-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://wwww.fb.com/themefisher" class="Google Plus">
-                                        <i class="ion-social-googleplus"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span></h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
                 </div>
-            </footer> <!-- /#footer -->
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
 
-	<!-- Template Javascript Files
-	================================================== -->
-	<!-- jquery -->
-	<script src="{% static 'plugins/jQurey/jquery.min.js'%}"></script>
-	<!-- Form Validation -->
-    <script src="{% static 'plugins/form-validation/jquery.form.js'%}"></script> 
-    <script src="{% static 'plugins/form-validation/jquery.validate.min.js'%}"></script>
-	<!-- slick slider -->
-	<script src="{% static 'plugins/slick/slick.min.js'%}"></script>
-	<!-- bootstrap js -->
-	<script src="{% static 'plugins/bootstrap/bootstrap.min.js'%}"></script>
-	<!-- wow js -->
-	<script src="{% static 'plugins/wow-js/wow.min.js'%}"></script>
-	<!-- slider js -->
-	<script src="{% static 'plugins/slider/slider.js'%}"></script>
-	<!-- Fancybox -->
-	<script src="{% static 'plugins/facncybox/jquery.fancybox.js'%}"></script>
-	<!-- template main js -->
-	<script src="{% static 'js/main.js'%}"></script>
- 	</body>
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span></h3>
+                <div class="faq-content">
+                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span></h3>
+                <div class="faq-content">
+                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</span></h3>
+                <div class="faq-content">
+                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="{% static 'assets/img/cta-bg.jpg'%}" alt="">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Testimonials</h3>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/testimonials-1.jpg'%}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/testimonials-2.jpg'%}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Sara Wilsson</h3>
+                        <h4>Designer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/testimonials-3.jpg'%}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Jena Karlis</h3>
+                        <h4>Store Owner</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/testimonials-4.jpg'%}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="{% static 'assets/img/testimonials/testimonials-5.jpg'%}" class="testimonial-img flex-shrink-0" alt="">
+                      <div>
+                        <h3>John Larson</h3>
+                        <h4>Entrepreneur</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="recent-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Posts</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-1.jpg'%}" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Politics</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author.jpg'%}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Maria Doe</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article>
+
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-2.jpg'%}" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Sports</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author-2.jpg'%}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Allisa Mayer</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jun 5, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <article>
+
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-3.jpg'%}" alt="" class="img-fluid">
+              </div>
+
+              <p class="post-category">Entertainment</p>
+
+              <h2 class="title">
+                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="{% static 'assets/img/blog/blog-author-3.jpg'%}" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Mark Dower</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jun 22, 2022</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+        </div><!-- End recent posts list -->
+
+      </div>
+
+    </section><!-- /Recent Posts Section -->
+    
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Append</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="sitename">Append</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
 </html>
